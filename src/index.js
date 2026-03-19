@@ -17,6 +17,13 @@ function setupScene({ scene }) {
 	const floor = new THREE.Mesh(floorGeometry, floorMaterial);
 	floor.rotateX(-Math.PI / 2);
 	scene.add(floor);
+
+	const coneGeometry = new THREE.ConeGeometry(0.6, 1.5);
+	const coneMaterial = new THREE.MeshStandardMaterial({color: 'purple'});
+	const cone = new THREE.Mesh(coneGeometry, coneMaterial);
+	scene.add(cone);
+	cone.position.set(0.4, 0.75, -1.5);
+
 }
 
 init(setupScene);
